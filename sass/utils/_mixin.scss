@@ -1,0 +1,65 @@
+@use "./variable";
+
+@mixin bg-color-primary{
+    background-color: variable.$color-primary;
+}
+
+@mixin bg-color-secondary{
+    background-color: variable.$color-secondary;
+}
+
+@mixin bg-color-tertiary{
+    background-color: variable.$color-tertiary;
+}
+
+@mixin bg-color-primsec{
+    background: linear-gradient(variable.$color-primary,variable.$color-secondary);
+}
+
+@mixin bg-color-secprim {
+    background: linear-gradient(to bottom right, variable.$color-secondary, variable.$color-primary)
+}
+
+@mixin bg-color-footer{
+    background-color: variable.$color-dark;
+}
+
+@mixin bg-color-grey{
+    background-color: rgb(244, 240, 240);
+}
+
+@mixin color-white{
+    color: white;
+}
+
+@mixin bg-color-white{
+    background-color: white;
+}
+
+@mixin box-shadow{
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 5px;
+}
+
+@mixin unset {
+    all: unset;   
+} 
+
+// @mixin btn--purple{
+//     @include unset;
+//     @include bg-color-secprim;
+//     @include color-white;
+//     @include box-shadow;
+//     padding: 0.5rem 1rem;
+//     border-radius: 50px;
+//     justify-self: center;
+
+// }
+
+@mixin btn-coeur{
+    @include unset;
+    font-size: 1.5rem;
+}
+
+@mixin border-radius {
+    border-radius: 10px;
+}

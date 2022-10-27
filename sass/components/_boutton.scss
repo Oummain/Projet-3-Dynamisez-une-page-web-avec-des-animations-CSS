@@ -1,0 +1,63 @@
+@use "../utils/variable";
+@use"../utils/mixin";
+
+.btn-coeur{
+    font-size: 1.5rem;
+    
+
+    &__input{
+        display: none;
+
+        &:checked{
+
+
+            // & + .btn-coeur__vide{
+            //     display: none;
+            // }
+
+            & ~ .btn-coeur__rempli{
+                
+                transform: scale(1.05);
+                transition: transform 1.5s;
+            }
+        }
+
+        
+    }
+
+    &__vide{
+        width: 26px;
+        
+        
+
+    }
+
+    &__rempli{
+        transform: scale(0);
+        
+        width: 26px;
+        
+        
+    }
+
+    
+    
+}
+
+
+
+.btn--purple{
+    @include unset;
+    @include bg-color-secprim;
+    @include color-white;
+    @include box-shadow;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    justify-self: center;
+
+    &:hover{
+        filter: brightness(110%);
+        box-shadow: rgba(0,0,0,1.5) 0px 1px 5px;
+    }
+
+}

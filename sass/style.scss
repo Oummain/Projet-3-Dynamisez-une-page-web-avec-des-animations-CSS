@@ -1,0 +1,25 @@
+@import"./base/police";
+@import"./utils/variable";
+@import"./utils/mixin";
+@import"./utils/keyframes";
+@import"./page/acceuil.scss";
+@import"./page/restaurants.scss";
+@import"./components/boutton";
+@import"./components/form";
+
+
+
+
+body{
+    min-width: 350px;
+}
+*{
+    margin: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+

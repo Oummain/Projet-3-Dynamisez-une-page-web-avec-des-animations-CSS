@@ -1,0 +1,27 @@
+
+.footer {
+    @include color-white;
+    @include bg-color-footer;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    padding: 1rem 0 2rem 1.5rem;
+
+    &__titre{
+        padding-bottom: 1rem;
+    }
+
+    & a{
+        @include color-white;
+    }
+    & i{
+        @include color-white;
+    width: 1rem;
+    height: 1rem;
+    padding-right: 1.5rem;
+    }
+}
+
+
+
+

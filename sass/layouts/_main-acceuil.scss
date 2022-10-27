@@ -1,0 +1,169 @@
+
+@use"../utils/mixin";
+
+.fonctionnement{
+    padding: 4rem 1.5rem ;
+
+    &__etape{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+}
+}
+
+
+
+.etape{
+    display: flex;
+    @include mixin.bg-color-grey;
+    padding: 1.5rem;
+    align-items: center;
+    border-radius: 20px;
+    @include mixin.box-shadow;
+    position: relative;
+
+    &--final{
+        background-color: #9256dc36;
+    }
+
+    &__num{
+        display: flex;
+        @include mixin.bg-color-primary;
+        @include mixin.color-white;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -1rem;
+    
+    }
+
+    &__logo{
+        padding-left: 1rem;
+        padding-right: 1.5rem;
+        font-size: 1.1rem;
+
+        &--final{
+            color:$color-primary;
+        }
+    }
+
+   
+
+    &__description{
+        // position: absolute;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+.restaurant{
+    @include mixin.bg-color-grey;
+    padding: 4rem 1.5rem ;
+
+    &__titre{
+        padding-bottom: 2rem;
+    }
+
+    &__liste{
+        display: grid;
+        // grid-template-rows: repeat(4, 1fr);
+        gap: 1.5rem;
+
+    }
+
+
+}
+
+.presentation__lien{
+    @include mixin.box-shadow;
+    @include mixin.border-radius;
+    
+
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        // display: grid;
+        // grid-template-rows: 3fr 1fr;
+        // width: 15rem;
+        position: relative;
+        
+
+        &__img{
+            width: 100%;
+            max-height: 12.5rem;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+            
+        }
+
+        & .new{
+            
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            @include mixin.bg-color-tertiary;
+            width: 4.5rem;
+            height: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #05382088;
+            font-weight: bold
+        }
+
+        // & .new2{
+        //     position: absolute;
+        //     right: 20px;
+        //     @include mixin.bg-color-tertiary;
+        // }
+
+        &__txt{
+            @include mixin.bg-color-white;
+            position: relative;
+            padding: 1rem;
+            color: black;
+            line-height: 1.5rem;
+
+            & .nom-restaurant{
+                
+                font-weight: bolder;
+                font-size: 1.05rem;
+            }
+
+            & .lieu-restaurant{
+                
+            }
+
+            & .btn-coeur{
+                
+                &__vide{
+                    position: absolute;
+                    top: 20px;
+                    right: 10px;
+                }
+
+                &__rempli{
+                    position: absolute;
+                    top: 20px;
+                    right: 10px;
+                }
+                
+
+                
+            }
+        }
+    }
+}

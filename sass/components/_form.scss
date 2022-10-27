@@ -1,0 +1,25 @@
+form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: lightgrey;
+    padding: 1rem 1rem ;
+    @include box-shadow;
+
+    & label{
+        padding-left: 2.5rem;
+    }
+
+    & input{
+        all: unset;
+        padding-left: 1rem;
+
+        &::placeholder{
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+
+
+

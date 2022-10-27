@@ -1,0 +1,183 @@
+@use"../utils/variable";
+@use"../utils/mixin";
+@import"../utils/keyframes";
+
+.main-restaurant{
+    @include bg-color-grey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 2rem 1rem 3rem;
+    margin-top: -4rem;
+    position: relative;
+    // display: flex;
+    // flex-flow: column;
+    // justify-content: center;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .btn-coeur{
+            
+            &__rempli{
+                position: absolute;
+                right: 20px;
+                
+            }
+
+            &__vide{
+                position: absolute;
+                right: 20px;
+            }
+        }
+
+
+    }
+}
+
+
+
+.carte{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+
+    &__menu__header__titre{
+        text-transform:uppercase;
+
+        &::after{
+            content: "";
+            width: 2rem;
+            background-color: $color-tertiary;
+            height: 2px;
+            display: block;
+        }
+    }
+
+    &__menu__choix{
+        padding-top: 1rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 1rem;
+        
+        &__plat{
+            @include mixin.box-shadow;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            
+        
+            &:hover  .check{
+                width: 3rem;
+                // transform: translateX(0);
+                & i{
+                    transform: rotate(-360deg);
+                    transition: transform 2s;
+                }
+                
+            }
+
+        }
+        
+        & .carte__menu__choix__plat:nth-child(1){
+            animation: aparition 1.5s ;
+        }
+        & .carte__menu__choix__plat:nth-child(2){
+            animation: aparition 2s;
+        }
+        & .carte__menu__choix__plat:nth-child(3){
+            animation: aparition 2.5s;
+        }
+
+    }
+
+    // & .btn--purple{
+    //     @include mixin.btn--purple
+    // }
+}
+
+.prix{
+    // display: flex;
+    // align-items: flex-end;
+    align-self: flex-end;
+    // display: inline;
+    // height: 100%;
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+.plat{
+    // display: flex;
+    flex:1;
+    // width: 100%;
+    padding: 0.5rem;
+    // border: solid;
+    // transition: margin-right 2s;
+    overflow: hidden;
+    
+
+
+    
+
+
+    &__description{
+    
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        
+        
+        
+    }
+
+
+   
+}
+
+
+
+.check{
+    display: flex;
+    background-color: $color-tertiary;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    // transform: translateX(100%) ;
+    // transition: transform 2s;
+    // transform-origin: 100% 50%;
+    width: 0rem;
+    transition: width 2s;
+    // border: solid;
+
+
+    &__container{
+        width: 2rem;
+    }
+   
+    & i{
+        transform: rotate(0);
+       
+        color: $color-tertiary;
+        background-color: white;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        border: solid $color-tertiary;
+    }
+    
+}
+

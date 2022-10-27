@@ -1,0 +1,41 @@
+@import"../layouts/header-acceuil";
+@import"../layouts/main-acceuil";
+@import"../layouts/footer";
+
+
+.site-acceuil{
+    animation: opacity-loading 3s ;
+    
+}
+
+.loading{
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+    animation: rotation-loading 3s;
+    opacity: 0;
+
+    & i{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:980px){
+    .fonctionnement{
+        
+        &__etape{
+            display: flex;
+            flex-flow: row;
+        }
+
+        .etape{
+            flex: 1;
+        }
+    }
+
+    .restaurant__liste{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}

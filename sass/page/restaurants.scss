@@ -1,0 +1,61 @@
+@import"../layouts/header-restaurant";
+@import"../layouts/main-restaurant";
+@import"../layouts/footer";
+
+
+
+
+.site-restaurant{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+@media screen and (min-width:980px){
+    .site-restaurant{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr;
+        // grid-template-areas: 
+        // "head"
+        // "main"
+        // "foot"
+        // ;
+    }
+
+    .header-restaurant{
+        // grid-area: head;
+
+        &__background img{
+            height: 30rem;
+        }
+    }
+
+
+    .main-restaurant{
+        // grid-area: main;
+        // height: 40rem;
+    }
+
+    .main-restaurant__header{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .carte{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        & .btn--purple{
+            grid-column-start: 2;
+        }
+    }
+
+
+
+    .footer{
+        // grid-area:foot ;
+    }
+}
