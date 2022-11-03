@@ -12,10 +12,11 @@
 
 body{
     min-width: 350px;
+    font-family: Roboto;
 }
 *{
     margin: 0;
-    font-family: Roboto;
+    
     box-sizing: border-box;
 }
 
@@ -23,3 +24,6 @@ a{
     text-decoration: none;
 }
 
+h1{
+    font-family: 'Shrikhand', cursive;
+}

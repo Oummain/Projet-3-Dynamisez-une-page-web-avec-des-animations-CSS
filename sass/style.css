@@ -5,9 +5,11 @@
 @keyframes aparition {
   0% {
     opacity: 0;
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes opacity-loading {
@@ -135,6 +137,7 @@
   font-size: 0.9rem;
   color: rgba(5, 56, 32, 0.5333333333);
   font-weight: bold;
+  padding: 3px;
 }
 .presentation__lien__bloc__txt {
   background-color: white;
@@ -248,9 +251,11 @@
 @keyframes aparition {
   0% {
     opacity: 0;
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes opacity-loading {
@@ -301,6 +306,7 @@
 }
 .carte__menu__header__titre {
   text-transform: uppercase;
+  font-weight: lighter;
 }
 .carte__menu__header__titre::after {
   content: "";
@@ -341,6 +347,9 @@
 .carte__menu__choix .carte__menu__choix__plat:nth-child(3) {
   animation: aparition 2.5s;
 }
+.carte__menu__choix .carte__menu__choix__plat:nth-child(4) {
+  animation: aparition 3s;
+}
 
 .prix {
   align-self: flex-end;
@@ -351,6 +360,8 @@
   flex: 1;
   padding: 0.5rem;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .plat__description {
   white-space: nowrap;
@@ -428,6 +439,7 @@
 }
 .btn-coeur {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .btn-coeur__input {
   display: none;
@@ -452,6 +464,7 @@
   padding: 0.5rem 1rem;
   border-radius: 50px;
   justify-self: center;
+  cursor: pointer;
 }
 .btn--purple:hover {
   filter: brightness(110%);
@@ -480,16 +493,20 @@ form input::placeholder {
 
 body {
   min-width: 350px;
+  font-family: Roboto;
 }
 
 * {
   margin: 0;
-  font-family: Roboto;
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
 }
 
 /*# sourceMappingURL=style.css.map */

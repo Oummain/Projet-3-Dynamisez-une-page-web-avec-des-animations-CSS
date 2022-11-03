@@ -48,6 +48,7 @@
 
     &__menu__header__titre{
         text-transform:uppercase;
+        font-weight: lighter;
 
         &::after{
             content: "";
@@ -97,7 +98,9 @@
         & .carte__menu__choix__plat:nth-child(3){
             animation: aparition 2.5s;
         }
-
+        & .carte__menu__choix__plat:nth-child(4){
+            animation: aparition 3s;
+        }
     }
 
     // & .btn--purple{
@@ -127,7 +130,8 @@
     // border: solid;
     // transition: margin-right 2s;
     overflow: hidden;
-    
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
 
     

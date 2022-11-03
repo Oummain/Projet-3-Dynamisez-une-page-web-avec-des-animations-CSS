@@ -3,6 +3,7 @@
 
 .btn-coeur{
     font-size: 1.5rem;
+    cursor: pointer;
     
 
     &__input{
@@ -54,6 +55,7 @@
     padding: 0.5rem 1rem;
     border-radius: 50px;
     justify-self: center;
+    cursor: pointer;
 
     &:hover{
         filter: brightness(110%);
