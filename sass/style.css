@@ -113,6 +113,16 @@
 .presentation {
   position: relative;
 }
+.presentation .btn-coeur__vide {
+  position: absolute;
+  top: 220px;
+  right: 10px;
+}
+.presentation .btn-coeur__rempli {
+  position: absolute;
+  top: 220px;
+  right: 10px;
+}
 
 .presentation__lien {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
@@ -153,17 +163,6 @@
 .presentation__lien__bloc__txt .nom-restaurant {
   font-weight: bolder;
   font-size: 1.05rem;
-}
-
-.btn-coeur__vide {
-  position: absolute;
-  top: 220px;
-  right: 10px;
-}
-.btn-coeur__rempli {
-  position: absolute;
-  top: 220px;
-  right: 10px;
 }
 
 .footer {

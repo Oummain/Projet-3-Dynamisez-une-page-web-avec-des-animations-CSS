@@ -87,7 +87,25 @@
 }
 
 .presentation{
-    position: relative
+    position: relative;
+
+    & .btn-coeur{
+                
+        &__vide{
+            position: absolute;
+            top: 220px;
+            right: 10px;
+        }
+    
+        &__rempli{
+            position: absolute;
+            top: 220px;
+            right: 10px;
+        }
+        
+    
+        
+    }
 }
 
 .presentation__lien{
@@ -152,22 +170,4 @@
 
         }
     }
-}
-
-.btn-coeur{
-                
-    &__vide{
-        position: absolute;
-        top: 220px;
-        right: 10px;
-    }
-
-    &__rempli{
-        position: absolute;
-        top: 220px;
-        right: 10px;
-    }
-    
-
-    
 }
