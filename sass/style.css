@@ -110,6 +110,10 @@
   gap: 1.5rem;
 }
 
+.presentation {
+  position: relative;
+}
+
 .presentation__lien {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
   border-radius: 10px;
@@ -150,14 +154,15 @@
   font-weight: bolder;
   font-size: 1.05rem;
 }
-.presentation__lien__bloc__txt .btn-coeur__vide {
+
+.btn-coeur__vide {
   position: absolute;
-  top: 20px;
+  top: 220px;
   right: 10px;
 }
-.presentation__lien__bloc__txt .btn-coeur__rempli {
+.btn-coeur__rempli {
   position: absolute;
-  top: 20px;
+  top: 220px;
   right: 10px;
 }
 
@@ -452,6 +457,23 @@
   width: 26px;
 }
 .btn-coeur__rempli {
+  transform: scale(0);
+  width: 26px;
+}
+
+.btn--coeur {
+  font-size: 1.5rem;
+  cursor: pointer;
+  all: unset;
+}
+.btn--coeur:active ~ .btn--coeur__rempli {
+  transform: scale(1.05);
+  transition: transform 1.5s;
+}
+.btn--coeur__vide {
+  width: 260px;
+}
+.btn--coeur__rempli {
   transform: scale(0);
   width: 26px;
 }

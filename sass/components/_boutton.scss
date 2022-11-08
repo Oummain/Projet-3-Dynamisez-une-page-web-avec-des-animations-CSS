@@ -45,6 +45,45 @@
     
 }
 
+.btn--coeur{
+    font-size: 1.5rem;
+    cursor: pointer;
+    all: unset;
+    
+
+
+    &:active{
+
+
+            // & + .btn-coeur__vide{
+            //     display: none;
+            // }
+
+        & ~ .btn--coeur__rempli{
+                
+                transform: scale(1.05);
+                transition: transform 1.5s;
+        }
+    }
+
+        
+    
+
+    &__vide{
+        width: 260px;
+        
+        
+
+    }
+
+    &__rempli{
+        transform: scale(0);
+        
+        width: 26px;
+        
+        
+    }
+}
 
 
 .btn--purple{

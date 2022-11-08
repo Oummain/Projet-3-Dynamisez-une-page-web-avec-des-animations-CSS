@@ -86,6 +86,10 @@
 
 }
 
+.presentation{
+    position: relative
+}
+
 .presentation__lien{
     @include mixin.box-shadow;
     @include mixin.border-radius;
@@ -146,23 +150,24 @@
 
             
 
-            & .btn-coeur{
-                
-                &__vide{
-                    position: absolute;
-                    top: 20px;
-                    right: 10px;
-                }
-
-                &__rempli{
-                    position: absolute;
-                    top: 20px;
-                    right: 10px;
-                }
-                
-
-                
-            }
         }
     }
+}
+
+.btn-coeur{
+                
+    &__vide{
+        position: absolute;
+        top: 220px;
+        right: 10px;
+    }
+
+    &__rempli{
+        position: absolute;
+        top: 220px;
+        right: 10px;
+    }
+    
+
+    
 }
